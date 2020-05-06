@@ -1,0 +1,812 @@
+[
+	{
+		"classify": "ladywear",
+		"name": "春夏新品",
+		"img_src": "src/assets/img/classify/spring.png"
+	},
+	{
+		"classify": "ladywear",
+		"name": "T恤",
+		"img_src": "src/assets/img/classify/Txu.png"
+	},
+	{
+		"classify": "ladywear",
+		"name": "连衣裙",
+		"img_src": "src/assets/img/classify/lianyiqun.png"
+	},
+	{
+		"classify": "ladywear",
+		"name": "半身裙",
+		"img_src": "src/assets/img/classify/banshenqun.png"
+	},
+	{
+		"classify": "ladywear",
+		"name": "套装",
+		"img_src": "src/assets/img/classify/taozhuang.png"
+	},
+	{
+		"classify": "ladywear",
+		"name": "裤装",
+		"img_src": "src/assets/img/classify/kuzhuang.png"
+	},
+	{
+		"classify": "ladywear",
+		"name": "衬衫",
+		"img_src": "src/assets/img/classify/chenshan.png"
+	},
+	{
+		"classify": "ladywear",
+		"name": "蕾丝雪纺衫",
+		"img_src": "src/assets/img/classify/leisixuefangshan.png"
+	},
+	{
+		"classify": "ladywear",
+		"name": "上衣外套",
+		"img_src": "src/assets/img/classify/shangyiwaitao.png"
+	},
+	{
+		"classify": "departstore",
+		"name": "纸品湿巾",
+		"img_src": "src/assets/img/classify/zhipinshijin.png"
+	},
+	{
+		"classify": "departstore",
+		"name": "厨房烹饪",
+		"img_src": "src/assets/img/classify/chufanghengren.png"
+	},
+	{
+		"classify": "departstore",
+		"name": "日用百货",
+		"img_src": "src/assets/img/classify/riyongbaihuo.png"
+	},
+	{
+		"classify": "departstore",
+		"name": "珠宝饰品",
+		"img_src": "src/assets/img/classify/zhubaoshipin.png"
+	},
+	{
+		"classify": "departstore",
+		"name": "收纳整理",
+		"img_src": "src/assets/img/classify/shounazhengli.png"
+	},
+	{
+		"classify": "departstore",
+		"name": "洗护清洁",
+		"img_src": "src/assets/img/classify/xihuqingjie.png"
+	},
+	{
+		"classify": "departstore",
+		"name": "清洁工具",
+		"img_src": "src/assets/img/classify/qingjiegongju.png"
+	},
+	{
+		"classify": "departstore",
+		"name": "水杯餐具",
+		"img_src": "src/assets/img/classify/shuibeicanju.png"
+	},
+	{
+		"classify": "departstore",
+		"name": "绿植园艺",
+		"img_src": "src/assets/img/classify/lvzhiyuanyi.png"
+	},
+	{
+		"classify": "shoebag",
+		"name": "女鞋",
+		"img_src": "src/assets/img/classify/nvxie.png"
+	},
+	{
+		"classify": "shoebag",
+		"name": "男鞋",
+		"img_src": "src/assets/img/classify/nanxie.png"
+	},
+	{
+		"classify": "shoebag",
+		"name": "低帮鞋",
+		"img_src": "src/assets/img/classify/dibangxie.png"
+	},
+	{
+		"classify": "shoebag",
+		"name": "帆布鞋",
+		"img_src": "src/assets/img/classify/fanbuxie.png"
+	},
+	{
+		"classify": "shoebag",
+		"name": "凉鞋",
+		"img_src": "src/assets/img/classify/liangxie.png"
+	},
+	{
+		"classify": "shoebag",
+		"name": "春夏新品",
+		"img_src": "src/assets/img/classify/chunxiaxinpin.png"
+	},
+	{
+		"classify": "shoebag",
+		"name": "女包",
+		"img_src": "src/assets/img/classify/nvbao.png"
+	},
+	{
+		"classify": "shoebag",
+		"name": "双肩包",
+		"img_src": "src/assets/img/classify/shuangjianbao.png"
+	},
+	{
+		"classify": "shoebag",
+		"name": "功能箱包",
+		"img_src": "src/assets/img/classify/gongnengxiangbao.png"
+	},
+	{
+		"classify": "food",
+		"name": "休闲零食",
+		"img_src": "src/assets/img/classify/xiuxianlingshi.png"
+	},
+	{
+		"classify": "food",
+		"name": "茶叶酒水",
+		"img_src": "src/assets/img/classify/chayejiushui.png"
+	},
+	{
+		"classify": "food",
+		"name": "饼干糕点",
+		"img_src": "src/assets/img/classify/binggangaodian.png"
+	},
+	{
+		"classify": "food",
+		"name": "粮油速食",
+		"img_src": "src/assets/img/classify/liangyousushi.png"
+	},
+	{
+		"classify": "food",
+		"name": "坚果蜜饯",
+		"img_src": "src/assets/img/classify/jianguomizhan.png"
+	},
+	{
+		"classify": "food",
+		"name": "乳品冲饮",
+		"img_src": "src/assets/img/classify/rupinchongyin.png"
+	},
+	{
+		"classify": "food",
+		"name": "传统滋补",
+		"img_src": "src/assets/img/classify/chuantongzibu.png"
+	},
+	{
+		"classify": "food",
+		"name": "营养保健",
+		"img_src": "src/assets/img/classify/yingyangbaojian.png"
+	},
+	{
+		"classify": "food",
+		"name": "端午节",
+		"img_src": "src/assets/img/classify/duanwujie.png"
+	},
+	{
+		"classify": "motherinfant",
+		"name": "童装",
+		"img_src": "src/assets/img/classify/tongzhuang.png"
+	},
+	{
+		"classify": "motherinfant",
+		"name": "童鞋",
+		"img_src": "src/assets/img/classify/tongxie.png"
+	},
+	{
+		"classify": "motherinfant",
+		"name": "玩具文娱",
+		"img_src": "src/assets/img/classify/wenyu.png"
+	},
+	{
+		"classify": "motherinfant",
+		"name": "宝宝尿裤",
+		"img_src": "src/assets/img/classify/baobaoniaoku.png"
+	},
+	{
+		"classify": "motherinfant",
+		"name": "洗护喂养",
+		"img_src": "src/assets/img/classify/xihuweiyang.png"
+	},
+	{
+		"classify": "motherinfant",
+		"name": "孕妈专区",
+		"img_src": "src/assets/img/classify/yunmazhuanqu.png"
+	},
+	{
+		"classify": "motherinfant",
+		"name": "童车童床",
+		"img_src": "src/assets/img/classify/tongchetongchuang.png"
+	},
+	{
+		"classify": "motherinfant",
+		"name": "奶粉辅食",
+		"img_src": "src/assets/img/classify/naifenfushi.png"
+	},
+	{
+		"classify": "motherinfant",
+		"name": "春夏新品",
+		"img_src": "src/assets/img/classify/chunxiaxinpin_mother.png"
+	},
+	{
+		"classify": "underwear",
+		"name": "文胸",
+		"img_src": "src/assets/img/classify/wenxiong.png"
+	},
+	{
+		"classify": "underwear",
+		"name": "女士内裤",
+		"img_src": "src/assets/img/classify/nvshineiku.png"
+	},
+	{
+		"classify": "underwear",
+		"name": "男士内裤",
+		"img_src": "src/assets/img/classify/nanshineiku.png"
+	},
+	{
+		"classify": "underwear",
+		"name": "睡衣家居服",
+		"img_src": "src/assets/img/classify/shuiyijiajufu.png"
+	},
+	{
+		"classify": "underwear",
+		"name": "服饰配件",
+		"img_src": "src/assets/img/classify/fushipeijian.png"
+	},
+	{
+		"classify": "underwear",
+		"name": "女士内衣",
+		"img_src": "src/assets/img/classify/nvshineiyi.png"
+	},
+	{
+		"classify": "underwear",
+		"name": "男士内衣",
+		"img_src": "src/assets/img/classify/nanshineiyi.png"
+	},
+	{
+		"classify": "underwear",
+		"name": "袜子",
+		"img_src": "src/assets/img/classify/wazi.png"
+	},
+	{
+		"classify": "underwear",
+		"name": "吊带/塑身",
+		"img_src": "src/assets/img/classify/diaodaisushen.png"
+	},
+	{
+		"classify": "electricapp",
+		"name": "饭煲电磁炉",
+		"img_src": "src/assets/img/classify/fanbaodiancilu.png"
+	},
+	{
+		"classify": "electricapp",
+		"name": "洗衣机",
+		"img_src": "src/assets/img/classify/xiyiji.png"
+	},
+	{
+		"classify": "electricapp",
+		"name": "厨房电器",
+		"img_src": "src/assets/img/classify/chufangdianqi.png"
+	},
+	{
+		"classify": "electricapp",
+		"name": "个护健康",
+		"img_src": "src/assets/img/classify/gehujiankang.png"
+	},
+	{
+		"classify": "electricapp",
+		"name": "冰箱",
+		"img_src": "src/assets/img/classify/bingxiang.png"
+	},
+	{
+		"classify": "electricapp",
+		"name": "空调",
+		"img_src": "src/assets/img/classify/kongtiao.png"
+	},
+	{
+		"classify": "electricapp",
+		"name": "生活电器",
+		"img_src": "src/assets/img/classify/shenghuodianqi.png"
+	},
+	{
+		"classify": "electricapp",
+		"name": "电视",
+		"img_src": "src/assets/img/classify/dianshi.png"
+	},
+	{
+		"classify": "electricapp",
+		"name": "烟灶热水器",
+		"img_src": "src/assets/img/classify/yanzaoreshuiqi.png"
+	},
+	{
+		"classify": "menwear",
+		"name": "春夏新品",
+		"img_src": "src/assets/img/classify/chunxiaxinpin_men.png"
+	},
+	{
+		"classify": "menwear",
+		"name": "T恤",
+		"img_src": "src/assets/img/classify/Txu_men.png"
+	},
+	{
+		"classify": "menwear",
+		"name": "休闲裤",
+		"img_src": "src/assets/img/classify/xiuxianku.png"
+	},
+	{
+		"classify": "menwear",
+		"name": "牛仔裤",
+		"img_src": "src/assets/img/classify/niuzaiku.png"
+	},
+	{
+		"classify": "menwear",
+		"name": "套装",
+		"img_src": "src/assets/img/classify/taozhuang_men.png"
+	},
+	{
+		"classify": "menwear",
+		"name": "短裤",
+		"img_src": "src/assets/img/classify/duanku.png"
+	},
+	{
+		"classify": "menwear",
+		"name": "夹克",
+		"img_src": "src/assets/img/classify/jiake.png"
+	},
+	{
+		"classify": "menwear",
+		"name": "衬衫",
+		"img_src": "src/assets/img/classify/chenshan_men.png"
+	},
+	{
+		"classify": "menwear",
+		"name": "西服西裤",
+		"img_src": "src/assets/img/classify/xifuxiku.png"
+	},
+	{
+		"classify": "furniture",
+		"name": "卧室家具",
+		"img_src": "src/assets/img/classify/woshijiaju.png"
+	},
+	{
+		"classify": "furniture",
+		"name": "客厅门厅",
+		"img_src": "src/assets/img/classify/ketingmenting.png"
+	},
+	{
+		"classify": "furniture",
+		"name": "餐厅家具",
+		"img_src": "src/assets/img/classify/cantingjiaju.png"
+	},
+	{
+		"classify": "furniture",
+		"name": "书房家具",
+		"img_src": "src/assets/img/classify/shufangjiaju.png"
+	},
+	{
+		"classify": "furniture",
+		"name": "儿童家具",
+		"img_src": "src/assets/img/classify/ertongjiaju.png"
+	},
+	{
+		"classify": "furniture",
+		"name": "办公商用",
+		"img_src": "src/assets/img/classify/bangongshangyong.png"
+	},
+	{
+		"classify": "furniture",
+		"name": "户外庭院",
+		"img_src": "src/assets/img/classify/huwaitingyuan.png"
+	},
+	{
+		"classify": "furniture",
+		"name": "桌椅凳子",
+		"img_src": "src/assets/img/classify/zhuoyidengzi.png"
+	},
+	{
+		"classify": "furniture",
+		"name": "柜子架子",
+		"img_src": "src/assets/img/classify/guizijiazi.png"
+	},
+	{
+		"classify": "fruits",
+		"name": "进口水果",
+		"img_src": "src/assets/img/classify/jinkoushuiguo.png"
+	},
+	{
+		"classify": "fruits",
+		"name": "新鲜水果",
+		"img_src": "src/assets/img/classify/xinxianshuiguo.png"
+	},
+	{
+		"classify": "fruits",
+		"name": "新果尝鲜",
+		"img_src": "src/assets/img/classify/xinguochangxian.png"
+	},
+	{
+		"classify": "fruits",
+		"name": "瓜果桃梨",
+		"img_src": "src/assets/img/classify/guaguotaoli.png"
+	},
+	{
+		"classify": "fruits",
+		"name": "热带水果",
+		"img_src": "src/assets/img/classify/redaishuiguo.png"
+	},
+	{
+		"classify": "fruits",
+		"name": "蔬果及制品",
+		"img_src": "src/assets/img/classify/shucaijizhipin.png"
+	},
+	{
+		"classify": "fruits",
+		"name": "海鲜水产",
+		"img_src": "src/assets/img/classify/haixianshuichan.png"
+	},
+	{
+		"classify": "fruits",
+		"name": "蛋及蛋制品",
+		"img_src": "src/assets/img/classify/danjidanzhipin.png"
+	},
+	{
+		"classify": "fruits",
+		"name": "熟食凉菜",
+		"img_src": "src/assets/img/classify/shushiliangcai.png"
+	},
+	{
+		"classify": "beautmakeup",
+		"name": "面膜/洁面",
+		"img_src": "src/assets/img/classify/mianmojiemian.png"
+	},
+	{
+		"classify": "beautmakeup",
+		"name": "面部护理",
+		"img_src": "src/assets/img/classify/mianbuhuli.png"
+	},
+	{
+		"classify": "beautmakeup",
+		"name": "水乳面霜",
+		"img_src": "src/assets/img/classify/shuirumianshuang.png"
+	},
+	{
+		"classify": "beautmakeup",
+		"name": "美发假发",
+		"img_src": "src/assets/img/classify/meifajiafa.png"
+	},
+	{
+		"classify": "beautmakeup",
+		"name": "身体洗护",
+		"img_src": "src/assets/img/classify/shentixihu.png"
+	},
+	{
+		"classify": "beautmakeup",
+		"name": "口红唇膏",
+		"img_src": "src/assets/img/classify/kouhongchungao.png"
+	},
+	{
+		"classify": "beautmakeup",
+		"name": "美妆工具",
+		"img_src": "src/assets/img/classify/meizhuanggongju.png"
+	},
+	{
+		"classify": "beautmakeup",
+		"name": "彩妆香氛",
+		"img_src": "src/assets/img/classify/caizhuangxiangfen.png"
+	},
+	{
+		"classify": "beautmakeup",
+		"name": "男士护理",
+		"img_src": "src/assets/img/classify/nanshihuli.png"
+	},
+	{
+		"classify": "mobilephone",
+		"name": "手机",
+		"img_src": "src/assets/img/classify/shouji.png"
+	},
+	{
+		"classify": "mobilephone",
+		"name": "壳膜支架",
+		"img_src": "src/assets/img/classify/kemozhijia.png"
+	},
+	{
+		"classify": "mobilephone",
+		"name": "充电配件",
+		"img_src": "src/assets/img/classify/chongdianpeijian.png"
+	},
+	{
+		"classify": "mobilephone",
+		"name": "耳机麦克风",
+		"img_src": "src/assets/img/classify/erjimaikefeng.png"
+	},
+	{
+		"classify": "mobilephone",
+		"name": "音响影视",
+		"img_src": "src/assets/img/classify/yinxiangyingshi.png"
+	},
+	{
+		"classify": "mobilephone",
+		"name": "智能穿戴",
+		"img_src": "src/assets/img/classify/zhinengchuandai.png"
+	},
+	{
+		"classify": "mobilephone",
+		"name": "智能生活",
+		"img_src": "src/assets/img/classify/zhinengshenghuo.png"
+	},
+	{
+		"classify": "mobilephone",
+		"name": "充电宝",
+		"img_src": "src/assets/img/classify/chongdianbao.png"
+	},
+	{
+		"classify": "mobilephone",
+		"name": "相机",
+		"img_src": "src/assets/img/classify/xiangji.png"
+	},
+	{
+		"classify": "hometex",
+		"name": "四件套",
+		"img_src": "src/assets/img/classify/sijiantao.png"
+	},
+	{
+		"classify": "hometex",
+		"name": "床单被套",
+		"img_src": "src/assets/img/classify/chaungdanbeitao.png"
+	},
+	{
+		"classify": "hometex",
+		"name": "凉席",
+		"img_src": "src/assets/img/classify/liangxi.png"
+	},
+	{
+		"classify": "hometex",
+		"name": "被子毛毯",
+		"img_src": "src/assets/img/classify/beizimaotan.png"
+	},
+	{
+		"classify": "hometex",
+		"name": "枕头床垫",
+		"img_src": "src/assets/img/classify/zhentouchuangdian.png"
+	},
+	{
+		"classify": "hometex",
+		"name": "地毯门帘",
+		"img_src": "src/assets/img/classify/ditanmenlian.png"
+	},
+	{
+		"classify": "hometex",
+		"name": "毛巾沙发垫",
+		"img_src": "src/assets/img/classify/maojinshafadian.png"
+	},
+	{
+		"classify": "hometex",
+		"name": "家居饰品",
+		"img_src": "src/assets/img/classify/jiajushipin.png"
+	},
+	{
+		"classify": "hometex",
+		"name": "蚊帐",
+		"img_src": "src/assets/img/classify/wenzhang.png"
+	},
+	{
+		"classify": "motion",
+		"name": "运动鞋",
+		"img_src": "src/assets/img/classify/yundongxie.png"
+	},
+	{
+		"classify": "motion",
+		"name": "运动服装",
+		"img_src": "src/assets/img/classify/yundongfuzhuang.png"
+	},
+	{
+		"classify": "motion",
+		"name": "健身休闲",
+		"img_src": "src/assets/img/classify/jianshenxiuxian.png"
+	},
+	{
+		"classify": "motion",
+		"name": "户外鞋服",
+		"img_src": "src/assets/img/classify/huwaixiefu.png"
+	},
+	{
+		"classify": "motion",
+		"name": "户外装备",
+		"img_src": "src/assets/img/classify/huwaizhuangbei.png"
+	},
+	{
+		"classify": "motion",
+		"name": "球类运动",
+		"img_src": "src/assets/img/classify/qiuleiyundong.png"
+	},
+	{
+		"classify": "motion",
+		"name": "骑行装备",
+		"img_src": "src/assets/img/classify/qixingzhuangbei.png"
+	},
+	{
+		"classify": "motion",
+		"name": "垂钓装备",
+		"img_src": "src/assets/img/classify/chuidiaozhuangbei.png"
+	},
+	{
+		"classify": "motion",
+		"name": "运动配件",
+		"img_src": "src/assets/img/classify/yundongpeijian.png"
+	},
+	{
+		"classify": "computer",
+		"name": "平板及配件",
+		"img_src": "src/assets/img/classify/pingbanjipeijian.png"
+	},
+	{
+		"classify": "computer",
+		"name": "笔记本电脑",
+		"img_src": "src/assets/img/classify/bijibendiannao.png"
+	},
+	{
+		"classify": "computer",
+		"name": "电脑整机",
+		"img_src": "src/assets/img/classify/diannaozhengji.png"
+	},
+	{
+		"classify": "computer",
+		"name": "学习机",
+		"img_src": "src/assets/img/classify/xuexiji.png"
+	},
+	{
+		"classify": "computer",
+		"name": "外设配件",
+		"img_src": "src/assets/img/classify/waishepeijian.png"
+	},
+	{
+		"classify": "computer",
+		"name": "文具",
+		"img_src": "src/assets/img/classify/wenju.png"
+	},
+	{
+		"classify": "computer",
+		"name": "笔类",
+		"img_src": "src/assets/img/classify/bilei.png"
+	},
+	{
+		"classify": "computer",
+		"name": "办公设备",
+		"img_src": "src/assets/img/classify/bangongshebei.png"
+	},
+	{
+		"classify": "computer",
+		"name": "网络设备",
+		"img_src": "src/assets/img/classify/wangluoshebei.png"
+	},
+	{
+		"classify": "automobile",
+		"name": "车用电子",
+		"img_src": "src/assets/img/classify/cheyongdianzi.png"
+	},
+	{
+		"classify": "automobile",
+		"name": "坐垫枕靠",
+		"img_src": "src/assets/img/classify/zuodianzhenkao.png"
+	},
+	{
+		"classify": "automobile",
+		"name": "脚垫尾箱垫",
+		"img_src": "src/assets/img/classify/jiaodianweixiangdian.png"
+	},
+	{
+		"classify": "automobile",
+		"name": "汽车内饰",
+		"img_src": "src/assets/img/classify/qicheneishi.png"
+	},
+	{
+		"classify": "automobile",
+		"name": "汽车零配件",
+		"img_src": "src/assets/img/classify/qichelingpeijian.png"
+	},
+	{
+		"classify": "automobile",
+		"name": "清洗美容",
+		"img_src": "src/assets/img/classify/qingximeirong.png"
+	},
+	{
+		"classify": "automobile",
+		"name": "外饰防护",
+		"img_src": "src/assets/img/classify/waishifanghu.png"
+	},
+	{
+		"classify": "automobile",
+		"name": "安全自驾",
+		"img_src": "src/assets/img/classify/anquanzijia.png"
+	},
+	{
+		"classify": "automobile",
+		"name": "汽车/摩托",
+		"img_src": "src/assets/img/classify/qichemotuo.png"
+	},
+	{
+		"classify": "homedecoration",
+		"name": "灯饰照明",
+		"img_src": "src/assets/img/classify/dengshizhaoming.png"
+	},
+	{
+		"classify": "homedecoration",
+		"name": "五金工具",
+		"img_src": "src/assets/img/classify/wujingongju.png"
+	},
+	{
+		"classify": "homedecoration",
+		"name": "卫浴五金",
+		"img_src": "src/assets/img/classify/weiyuwujin.png"
+	},
+	{
+		"classify": "homedecoration",
+		"name": "电子电工",
+		"img_src": "src/assets/img/classify/dianzidiangong.png"
+	},
+	{
+		"classify": "homedecoration",
+		"name": "厨房五金",
+		"img_src": "src/assets/img/classify/chufangwujin.png"
+	},
+	{
+		"classify": "homedecoration",
+		"name": "监控安防",
+		"img_src": "src/assets/img/classify/jiankonganfang.png"
+	},
+	{
+		"classify": "homedecoration",
+		"name": "墙地面",
+		"img_src": "src/assets/img/classify/qiangdimian.png"
+	},
+	{
+		"classify": "homedecoration",
+		"name": "家用五金",
+		"img_src": "src/assets/img/classify/jiayongwujin.png"
+	},
+	{
+		"classify": "homedecoration",
+		"name": "全屋定制",
+		"img_src": "src/assets/img/classify/quanwudingzhi.png"
+	},
+	{
+		"classify": "medicine",
+		"name": "家庭常备",
+		"img_src": "src/assets/img/classify/jiatingchangbei.png"
+	},
+	{
+		"classify": "medicine",
+		"name": "应季药品",
+		"img_src": "src/assets/img/classify/yingjiyaopin.png"
+	},
+	{
+		"classify": "medicine",
+		"name": "中西药品",
+		"img_src": "src/assets/img/classify/zhongxiyaopin.png"
+	},
+	{
+		"classify": "medicine",
+		"name": "隐形眼镜",
+		"img_src": "src/assets/img/classify/yinxingyanjing.png"
+	},
+	{
+		"classify": "medicine",
+		"name": "康复辅助",
+		"img_src": "src/assets/img/classify/kangfufuzhu.png"
+	},
+	{
+		"classify": "medicine",
+		"name": "保健用品",
+		"img_src": "src/assets/img/classify/baojianyongpin.png"
+	},
+	{
+		"classify": "medicine",
+		"name": "医疗器械",
+		"img_src": "src/assets/img/classify/yiliaoqixie.png"
+	},
+	{
+		"classify": "medicine",
+		"name": "避孕验孕",
+		"img_src": "src/assets/img/classify/biyunyanyun.png"
+	},
+	{
+		"classify": "medicine",
+		"name": "成人情趣",
+		"img_src": "src/assets/img/classify/chengrenqingqu.png"
+	}
+]

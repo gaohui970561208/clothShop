@@ -1,0 +1,68 @@
+[
+	{
+		"id": 1,
+		"active": "618",
+		"txt": "现摘脆甜油桃黄油桃5斤3斤2斤新鲜水果桃子非水蜜桃黄桃蟠桃毛桃",
+		"shop": "桃鲜记旗舰店",
+		"shop_id": 1,
+		"tag": ["本周桃畅销前十", "极速退款"],
+		"price": "19.5",
+		"number": "1.1万",
+		"img_src": "src/assets/img/products/taozi.png"
+	},
+	{
+		"id": 2,
+		"active": "618",
+		"txt": "【买五送5斤】湖北秭归脐橙丑橙子新鲜水果小夏橙10斤应季3斤装",
+		"shop": "桃鲜记旗舰店",
+		"shop_id": 1,
+		"tag": ["本周橙子畅销前十", "极速退款"],
+		"price": "11.9",
+		"number": "10万+",
+		"img_src": "src/assets/img/products/juzi.png"
+	},
+	{
+		"id": 3,
+		"active": "618",
+		"txt": "汽车用品清洁软胶车内除尘内饰缝隙万能键盘清洁泥粘灰",
+		"shop": "",
+		"shop_id": 0,
+		"tag": ["极速退款", "满30返2"],
+		"price": "3.8",
+		"number": "10万+",
+		"img_src": "src/assets/img/products/qicheyongpin.png"
+	},
+	{
+		"id": 4,
+		"active": "618",
+		"txt": "水龙头防溅水花洒过滤嘴厨房面盆滤水器可旋转伸缩万向喷头节水器",
+		"shop": "",
+		"shop_id": 0,
+		"tag": ["本周厨房龙头畅销前十", "满18返1"],
+		"price": "3.63",
+		"number": "10万+",
+		"img_src": "src/assets/img/products/shuilongtou.png"
+	},
+	{
+		"id": 5,
+		"active": "618",
+		"txt": "【6斤40卷半年装】36卷12卷富豪本色卫生纸巾卷纸批发家用卷筒纸",
+		"shop": "臻木官方旗舰店",
+		"shop_id": 1,
+		"tag": ["本周卷筒纸畅销前十", "极速退款", "满72返4"],
+		"price": "7.9",
+		"number": "10万+",
+		"img_src": "src/assets/img/products/tongzhi.png"
+	},
+	{
+		"id": 6,
+		"active": "618",
+		"txt": "网红usb防风打火机充电个性超薄电子点烟器男士创意定制送男友潮",
+		"shop": "刘艳平家居生活旗舰店",
+		"shop_id": 1,
+		"tag": ["退货包运费", "满19返1"],
+		"price": "7.5",
+		"number": "1.2万",
+		"img_src": "src/assets/img/products/dahuoji.png"
+	}
+]
