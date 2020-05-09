@@ -3,18 +3,13 @@
 .login_wrap {
 	width: 100%;
 	height: 100vh;
-	.title {
-		padding-top: 100 / @vw;
-		width: 100%;
-		display: flex;
-		flex-flow: row nowrap;
-		justify-content: center;
-		align-items: center;
-		span {
-			font-size: 50 / @vw;
-			color: #409eff;
-			letter-spacing: 3 / @vw;
-			text-shadow: 3 / @vw 2 / @vw 5 / @vw rgba(24, 174, 246, 0.9);
+	.logo_wrap {
+		margin: 200 / @vw auto 0;
+		width: 500 / @vw;
+		img {
+			width: 100%;
+			height: 100%;
+			vertical-align: center;
 		}
 	}
 	.form_wrap {
@@ -37,6 +32,9 @@
 		.btn {
 			margin-left: 100 / @vw;
 			padding: 0 100 / @vw;
+			background-color: rgb(245, 130, 255);
+			border-radius: 10 / @vw;
+			color: #ffffff;
 			&:first-child {
 				margin-left: 0;
 			}
@@ -46,10 +44,8 @@
 </style>
 <template>
 	<div class="login_wrap">
-		<div class="title">
-			<span>
-				没什么在线商城
-			</span>
+		<div class="logo_wrap">
+			<img src="../assets/img/logo.png" alt="" />
 		</div>
 		<div class="form_wrap">
 			<van-cell-group>
@@ -66,8 +62,8 @@
 			</van-cell-group>
 		</div>
 		<div class="operate_btn_wrap">
-			<van-button type="info" class="btn" @click="login">{{ loginText }}</van-button>
-			<van-button type="info" class="btn" @click="regesiter">{{ regeText }}</van-button>
+			<van-button class="btn" @click="login">{{ loginText }}</van-button>
+			<van-button class="btn" @click="regesiter">{{ regeText }}</van-button>
 		</div>
 	</div>
 </template>

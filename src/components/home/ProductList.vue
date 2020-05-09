@@ -6,6 +6,9 @@
 	box-sizing: border-box;
 	padding: 0 30 / @vw;
 	.list_item {
+		box-sizing: border-box;
+		border-radius: 10 / @vw;
+		padding: 10 / @vw;
 		margin-top: 20 / @vw;
 		border-top: 2 / @vw solid rgb(238, 243, 240);
 		width: 100%;
@@ -13,6 +16,7 @@
 		flex-flow: row nowrap;
 		justify-content: space-between;
 		align-items: center;
+		background-color: #ffffff;
 		&:first-child {
 			margin: 0;
 			border: 0;
@@ -28,6 +32,7 @@
 		justify-content: center;
 		align-items: center;
 		border-radius: 5 / @vw;
+		overflow: hidden;
 		img {
 			vertical-align: top;
 			width: 280 / @vw;

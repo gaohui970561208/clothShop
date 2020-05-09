@@ -4,13 +4,10 @@
 	width: 100vw;
 	overflow: hidden;
 	box-sizing: border-box;
-	padding: 40 / @vw 40 / @vw;
-	.title {
-		text-align: center;
-	}
 	.set_wrap {
 		width: 100%;
-		padding-top: 100 / @vw;
+		box-sizing: border-box;
+		padding: 100 / @vw 40 / @vw 40 / @vw;
 	}
 	.user_img {
 		display: flex;
@@ -73,7 +70,7 @@
 </style>
 <template>
 	<div class="setting_wrap">
-		<div class="title">个人设置</div>
+		<van-nav-bar title="个人设置" left-text="返回" left-arrow @click-left="onBack" />
 		<div class="set_wrap">
 			<van-cell title="头像" is-link @click="setAvatarDialog">
 				<template>
@@ -335,6 +332,9 @@ export default {
 			} catch (error) {
 				errors(error);
 			}
+		},
+		onBack() {
+			this.$router.go(-1);
 		}
 	}
 };

@@ -2,17 +2,19 @@
 @vw: 7.5vw;
 .center_wrap {
 	width: 100%;
-	background-image: linear-gradient(to top, #ffffff, #99ccff);
+	min-height: 100vh;
+	background-image: linear-gradient(to top, rgb(241, 187, 255), rgb(251, 219, 255));
 	.user_message_wrap {
-		padding-top: 100 / @vw;
 		width: 100%;
+		box-sizing: border-box;
+		padding: 100 / @vw 80 / @vw 0;
 		display: flex;
-		flex-flow: column nowrap;
-		justify-content: center;
+		flex-flow: row nowrap;
 		align-items: center;
 		.img_wrap {
-			width: 300 / @vw;
-			height: 300 / @vw;
+			flex-shrink: 0;
+			width: 150 / @vw;
+			height: 150 / @vw;
 			box-shadow: 0 0 2 / @vw 3 / @vw #ffffff;
 			border-radius: 50%;
 			overflow: hidden;
@@ -22,12 +24,52 @@
 				vertical-align: top;
 			}
 		}
-		.user_name {
-			padding-top: 50 / @vw;
+		.user_meg {
+			margin-left: 100 / @vw;
 		}
 		.user_descript {
+			max-width: 340 / @vw;
+			overflow: hidden;
+			white-space: nowrap;
+			text-overflow: ellipsis;
 			color: rgb(114, 114, 114);
 			padding-top: 40 / @vw;
+		}
+	}
+	.order_wrap {
+		margin-top: 50 / @vw;
+		width: 100%;
+		box-sizing: border-box;
+		padding: 20 / @vw;
+		.order_title {
+			font-size: 30 / @vw;
+		}
+		.order_type_list {
+			margin-top: 20 / @vw;
+			width: 100%;
+			border-radius: 10 / @vw;
+			overflow: hidden;
+			background-color: #ffffff;
+			display: flex;
+			flex-flow: row nowrap;
+			justify-content: space-between;
+			align-items: center;
+		}
+		.order_item {
+			width: 20%;
+			height: 120 / @vw;
+			display: flex;
+			flex-flow: column nowrap;
+			align-items: center;
+			justify-content: center;
+			background-color: rgb(255, 238, 254);
+			.icon {
+				font-size: 60 / @vw;
+				color: rgb(110, 65, 65);
+			}
+			.order_status_text {
+				font-size: 20 / @vw;
+			}
 		}
 	}
 	.operate_card_wrap {
@@ -72,16 +114,42 @@
 			<div class="img_wrap">
 				<img :src="userInfo.avatarUrl" alt="" />
 			</div>
-			<div class="user_name">{{ userInfo.nickName || userInfo.userName || '默认昵称' }}</div>
-			<div class="user_descript">{{ userInfo.descript || '什么都没有' }}</div>
+			<div class="user_meg">
+				<div class="user_name">{{ userInfo.nickName || userInfo.userName || '默认昵称' }}</div>
+				<div class="user_descript">{{ userInfo.descript || '未留下个性签名' }}</div>
+			</div>
+		</div>
+		<div class="order_wrap">
+			<div class="order_title">我的订单</div>
+			<div class="order_type_list">
+				<div class="order_item" @click="toOrder(-1)">
+					<i class="icon iconfont icondingdan"></i>
+					<span class="order_status_text">全部</span>
+				</div>
+				<div class="order_item" @click="toOrder(1)">
+					<i class="icon iconfont iconwuliu"></i>
+					<span class="order_status_text">待发货</span>
+				</div>
+				<div class="order_item" @click="toOrder(2)">
+					<i class="icon iconfont icondaishouhuo"></i>
+					<span class="order_status_text">待收货</span>
+				</div>
+				<div class="order_item" @click="toOrder(4)">
+					<i class="icon iconfont iconyiwancheng"></i>
+					<span class="order_status_text">已完成</span>
+				</div>
+				<div class="order_item" @click="toOrder(5)">
+					<i class="icon iconfont icontishi"></i>
+					<span class="order_status_text">已取消</span>
+				</div>
+			</div>
 		</div>
 		<div class="operate_card_wrap">
 			<div class="operate_card">
-				<van-cell title="我的订单" is-link @click="goto('orders')" />
-				<van-cell title="购物车" is-link @click="goto('shoppingCart')" />
+				<van-cell title="地址管理" is-link @click="goto('address')" />
+				<van-cell title="账号与安全" is-link @click="goto('setting')" />
 				<van-cell title="意见反馈" is-link @click="goto('feedback')" />
 				<van-cell title="帮助中心" is-link @click="show = true" />
-				<van-cell title="设置" is-link @click="goto('setting')" />
 			</div>
 		</div>
 		<van-popup v-model="show" position="bottom">
@@ -115,6 +183,14 @@ export default {
 		goto(name) {
 			this.$router.push({
 				name: name
+			});
+		},
+		toOrder(status) {
+			this.$router.push({
+				name: 'orders',
+				params: {
+					status: status
+				}
 			});
 		}
 	}

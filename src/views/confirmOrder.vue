@@ -2,13 +2,59 @@
 @vw: 7.5vw;
 .confirm_order {
 	width: 100%;
+	height: 100vh;
 	box-sizing: border-box;
-	padding: 40 / @vw;
+	padding-bottom: 100 / @vw;
+	overflow-x: hidden;
+	overflow-y: auto;
+	.address_wrap {
+		width: 100%;
+		box-sizing: border-box;
+		padding: 40 / @vw 40 / @vw 0;
+		.address_content {
+			width: 100%;
+			display: flex;
+			flex-flow: column nowrap;
+			box-shadow: 0 0 2 / @vw 1 / @vw rgb(246, 174, 255);
+			box-sizing: border-box;
+			padding: 20 / @vw 30 / @vw;
+		}
+		.no_address_text {
+			text-align: center;
+			cursor: pointer;
+		}
+		.address_people {
+			width: 100%;
+			display: flex;
+			flex-flow: row nowrap;
+			align-items: center;
+			.address_name {
+				font-size: 30 / @vw;
+			}
+			.address_phone {
+				margin-left: 30 / @vw;
+				font-size: 28 / @vw;
+			}
+		}
+		.address_text {
+			margin-top: 40 / @vw;
+			width: 100%;
+			text-align: left;
+		}
+	}
 	.product_wrap {
-		margin-top: 40 / @vw;
+		box-sizing: border-box;
+		padding: 40 / @vw;
+		.product_card {
+			margin-top: 40 / @vw;
+			&:first-child {
+				margin-top: 0;
+			}
+		}
 	}
 	.pay_type_wrap {
-		margin-top: 40 / @vw;
+		box-sizing: border-box;
+		padding: 40 / @vw;
 		.pay_title {
 			display: flex;
 			flex-flow: row nowrap;
@@ -33,19 +79,18 @@
 </style>
 <template>
 	<div class="confirm_order">
+		<van-nav-bar title="提交订单" left-text="返回" left-arrow @click-left="onBack" />
 		<div class="address_wrap">
-			<van-cell title="收获地址" @click="choiceAddress">
-				<div class="address_city">{{ areaStr || '请选择地区' }}</div>
-			</van-cell>
-			<van-cell title="详细地址" @click="addAddress">
-				<div class="address_city">{{ address || '请添加详细地址' }}</div>
-			</van-cell>
-			<van-cell title="姓名" @click="nameDialog">
-				<div class="address_city">{{ name || '请添加联系人姓名' }}</div>
-			</van-cell>
-			<van-cell title="手机号" @click="phoneDialog">
-				<div class="address_city">{{ phone || '请添加收货联系方式' }}</div>
-			</van-cell>
+			<div class="address_content" v-if="addressData && Object.keys(addressData).length > 0">
+				<div class="address_people">
+					<div class="address_name">{{ addressData.name }}</div>
+					<div class="address_phone">{{ addressData.phone }}</div>
+				</div>
+				<div class="address_text">{{ addressData.area }} {{ addressData.address }}</div>
+			</div>
+			<div class="address_content" v-else>
+				<div class="no_address_text">请选择地址</div>
+			</div>
 		</div>
 		<div class="product_wrap">
 			<ProductCard :productInfo="item" :isOrder="true" v-for="(item, index) in productList" :key="index" />
@@ -80,18 +125,25 @@
 			</van-radio-group>
 		</div>
 		<van-submit-bar :price="allPrice" button-text="提交订单" @submit="createOrder" />
-		<van-popup v-model="areaChoice" position="bottom">
-			<van-area :area-list="areaList" :columns-placeholder="['请选择', '请选择', '请选择']" @confirm="confirm" />
+		<van-popup v-model="addressDataShow" position="bottom">
+			<van-radio-group v-model="addressData">
+				<van-radio v-for="(item, index) in addressList" :key="index" :name="item">
+					<div class="address_content">
+						<div class="address_top">
+							<div class="address_name">{{ item.name }}</div>
+							<div class="address_phone">{{ item.phone }}</div>
+						</div>
+						<div class="address_address">
+							<div class="address_area">{{ item.area }}</div>
+							<div class="address_text">{{ item.address }}</div>
+						</div>
+						<div class="edit_icon" @click="editAddress(item, index)">
+							<div class="icon iconfont iconbianji"></div>
+						</div>
+					</div>
+				</van-radio>
+			</van-radio-group>
 		</van-popup>
-		<van-dialog v-model="addressShow" title="标题" show-cancel-button @confirm="addressUpdate">
-			<van-field v-model="addressTxt" placeholder="请输入详细地址" />
-		</van-dialog>
-		<van-dialog v-model="nameShow" title="标题" show-cancel-button @confirm="nameUpdate">
-			<van-field v-model="nameTxt" placeholder="请输入联系人姓名" />
-		</van-dialog>
-		<van-dialog v-model="phoneShow" title="标题" show-cancel-button @confirm="phoneUpdate">
-			<van-field v-model="phoneTxt" placeholder="请输入联系方式" />
-		</van-dialog>
 	</div>
 </template>
 <script>
@@ -128,18 +180,10 @@ export default {
 		return {
 			productList: [],
 			areaList,
-			areaChoice: false,
-			areaStr: null,
-			address: '',
-			addressShow: false,
-			addressTxt: '',
-			name: '',
-			phone: '',
-			nameShow: false,
-			phoneShow: false,
-			nameTxt: '',
-			phoneTxt: '',
-			payType: 0
+			addressData: {},
+			payType: 0,
+			addressDataShow: false,
+			addressList: []
 		};
 	},
 	mounted() {
@@ -155,69 +199,47 @@ export default {
 			this.productList.push(...this.$route.params.productList);
 		}
 		console.log(this.productList);
+		this.getAddressList();
 	},
 	methods: {
 		...mapActions({
 			setUserInfo: 'users/setUserInfo'
 		}),
-		//选择地址
-		choiceAddress() {
-			this.areaChoice = true;
-		},
-		confirm(data) {
-			this.areaStr = '';
-			data.forEach(element => {
-				this.areaStr += element.name;
-			});
-			this.areaChoice = false;
-		},
-		addAddress() {
-			this.addressShow = true;
-			this.addressTxt = '';
-		},
-		nameDialog() {
-			this.nameShow = true;
-			this.nameTxt = '';
-		},
-		phoneDialog() {
-			this.phoneShow = true;
-			this.phoneTxt = '';
-		},
-		addressUpdate() {
-			this.address = this.addressTxt;
-		},
-		nameUpdate() {
-			this.name = this.nameTxt;
-		},
-		phoneUpdate() {
-			if (!/^1[3456789]\d{9}$/.test(this.phoneTxt)) {
-				this.$toast('手机号码有误');
-				return;
+		async getAddressList() {
+			try {
+				this.addressList = [];
+				const params = {
+					userId: this.userInfo.userId
+				};
+				const { data, ok } = await users.getAddressList(params);
+				if (!ok) return;
+				console.log(data);
+				if (data.data && Array.isArray(data.data) && data.data.length > 0) {
+					data.data.forEach(element => {
+						if (element.isDefault) {
+							this.addressData = element;
+						}
+						this.addressList.push(element);
+					});
+					if (data.data.length === 1) {
+						this.addressData = data.data[0];
+					}
+				} else {
+					return;
+				}
+			} catch (error) {
+				errors(error);
 			}
-			this.phone = this.phoneTxt;
 		},
 		createOrder() {
-			if (
-				!this.areaStr ||
-				this.areaStr.length === 0 ||
-				!this.address ||
-				this.address.length === 0 ||
-				!this.name ||
-				this.name.length === 0 ||
-				!this.phone ||
-				this.phone.length === 0
-			) {
-				this.$toast('请完善收货信息');
+			if (!this.addressData || Object.keys(this.addressData).length === 0) {
+				this.$toast('选择收货地址');
 				return;
 			}
 			this.$toast.loading();
 			try {
-				const addressData = {
-					name: this.name,
-					phone: this.phone,
-					address: this.areaStr + this.address
-				};
-				this.productList.forEach(element => {
+				const addressData = this.addressData;
+				this.productList.forEach((element, index) => {
 					let list = [];
 					list.push(element);
 					const reData = {
@@ -233,11 +255,14 @@ export default {
 						if (!ok) return;
 						this.$toast.clear();
 						this.$toast(data.msg);
-						if (this.$route.params.isCart) {
+						if (index >= this.productList.length - 1) {
 							let shoppingList = [];
 							shoppingList.push(...this.productList);
 							users.deleteShoppingCart(this.userInfo.userId, shoppingList).then(() => {
-								this.setUserInfo();
+								const userData = {
+									userId: this.userInfo.userId
+								};
+								this.setUserInfo(userData);
 							});
 						}
 					});
@@ -246,6 +271,9 @@ export default {
 			} catch (error) {
 				errors(error);
 			}
+		},
+		onBack() {
+			this.$router.go(-1);
 		}
 	}
 };

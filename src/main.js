@@ -6,7 +6,7 @@ import './plugins';
 
 Vue.config.productionTip = false;
 
-//设置全局路由首位，判断当前是否存在账号信息，若存在，则进行下一步，若不存在，则验证当前是否登录，若验证不通过
+//设置全局路由首位，判断当前是否存在账号信息，若存在，则进行下一步，若不存在，则验证当前是否登录，若验证不通过跳转登录页面
 router.beforeEach((to, from, next) => {
 	if (to.name === 'login') {
 		next();

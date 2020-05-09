@@ -4,13 +4,10 @@
 	width: 100vw;
 	overflow: hidden;
 	box-sizing: border-box;
-	padding: 40 / @vw 40 / @vw;
-	.title {
-		text-align: center;
-	}
 	.feedback {
-		padding-top: 50 / @vw;
+		padding: 50 / @vw 40 / @vw 40 / @vw;
 		width: 100%;
+		box-sizing: border-box;
 		.tips {
 			font-size: 24 / @vw;
 			color: rgb(95, 95, 95);
@@ -39,7 +36,9 @@
 	}
 	.submit_btn {
 		margin-top: 50 / @vw;
+		padding: 0 40 / @vw;
 		width: 100%;
+		box-sizing: border-box;
 		display: flex;
 		flex-flow: row nowrap;
 		justify-content: center;
@@ -52,7 +51,7 @@
 </style>
 <template>
 	<div class="feedback_wrap">
-		<div class="title">意见反馈</div>
+		<van-nav-bar title="意见反馈" left-text="返回" left-arrow @click-left="onBack" />
 		<div class="feedback">
 			<div class="tips">
 				请在下面输入您的意见
@@ -103,9 +102,13 @@ export default {
 				if (!ok) return;
 				this.$toast.clear();
 				this.$toast(data.msg);
+				this.onBack();
 			} catch (error) {
 				errors(error);
 			}
+		},
+		onBack() {
+			this.$router.go(-1);
 		}
 	}
 };

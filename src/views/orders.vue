@@ -64,6 +64,7 @@
 </style>
 <template>
 	<div class="orders_wrap">
+		<van-nav-bar title="我的订单" left-text="返回" left-arrow @click-left="onBack" />
 		<van-tabs v-model="status" @change="tabChange" swipe-threshold="5">
 			<van-tab title="全部" :name="-1"></van-tab>
 			<van-tab title="待发货" :name="1"></van-tab>
@@ -139,6 +140,9 @@ export default {
 		};
 	},
 	mounted() {
+		if (this.$route.params) {
+			this.status = this.$route.params.status;
+		}
 		this.getOrderListInfo();
 	},
 	methods: {
@@ -167,6 +171,9 @@ export default {
 					id: item.orderId
 				}
 			});
+		},
+		onBack() {
+			this.$router.go(-1);
 		}
 	}
 };

@@ -1,6 +1,9 @@
 <style lang="less">
 .tab_bar_wrap {
 	width: 100%;
+	.van-tabbar-item--active {
+		color: rgb(217, 38, 253);
+	}
 }
 </style>
 <template>
@@ -11,10 +14,10 @@
 				<i class="icon iconfont" :class="props.active ? 'iconshouyefill' : 'iconshouye'"></i>
 			</template>
 		</van-tabbar-item>
-		<van-tabbar-item name="search" @click="goto('search')">
-			<span>搜索</span>
+		<van-tabbar-item name="shoppingCart" @click="goto('shoppingCart')">
+			<span>购物车</span>
 			<template #icon="props">
-				<i class="icon iconfont iconsearch1" :class="props.active ? '' : ''"></i>
+				<i class="icon iconfont icongouwuche" :class="props.active ? 'icongouwuchefill' : ''"></i>
 			</template>
 		</van-tabbar-item>
 		<van-tabbar-item name="center" @click="goto('center')">

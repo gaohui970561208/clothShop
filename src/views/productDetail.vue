@@ -194,6 +194,7 @@
 </style>
 <template>
 	<div class="product_detail">
+		<van-nav-bar title="商品详情" left-text="返回" left-arrow @click-left="onBack" />
 		<div class="product_img_wrap">
 			<img :src="productInfo.productImg" alt="" />
 		</div>
@@ -363,6 +364,10 @@ export default {
 		//选择规格数据
 		updateCategory(data) {
 			this.categoryData = data;
+		},
+		//返回
+		onBack() {
+			this.$router.go(-1);
 		}
 	}
 };

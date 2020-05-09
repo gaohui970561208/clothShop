@@ -24,6 +24,7 @@
 </style>
 <template>
 	<div class="search_wrap">
+		<van-nav-bar title="搜索" left-text="返回" left-arrow @click-left="back" />
 		<van-search
 			v-model="searchTxt"
 			placeholder="请输入搜索关键词"
@@ -104,6 +105,10 @@ export default {
 			this.searchTxt = '';
 			this.productList = [];
 			this.searchStatus = false;
+		},
+		//返回上一页
+		back() {
+			this.$router.go(-1);
 		}
 	}
 };

@@ -16,16 +16,21 @@ const routes = [
 				component: () => import('@/views/home')
 			},
 			{
-				path: 'search',
-				name: 'search',
-				component: () => import('@/views/home/search')
-			},
-			{
 				path: 'center',
 				name: 'center',
 				component: () => import('@/views/home/center')
+			},
+			{
+				path: 'shoppingCart',
+				name: 'shoppingCart',
+				component: () => import('@/views/home/shoppingCart')
 			}
 		]
+	},
+	{
+		path: 'search',
+		name: 'search',
+		component: () => import('@/views/home/search')
 	},
 	{
 		path: '/login',
@@ -53,11 +58,6 @@ const routes = [
 		component: () => import('@/views/setting')
 	},
 	{
-		path: '/shoppingCart',
-		name: 'shoppingCart',
-		component: () => import('@/views/shoppingCart')
-	},
-	{
 		path: '/confirmOrder',
 		name: 'confirmOrder',
 		component: () => import('@/views/confirmOrder')
@@ -66,6 +66,11 @@ const routes = [
 		path: '/orderInfo/:id',
 		name: 'orderInfo',
 		component: () => import('@/views/orderInfo')
+	},
+	{
+		path: '/address',
+		name: 'address',
+		component: () => import('@/views/address')
 	}
 ];
 
