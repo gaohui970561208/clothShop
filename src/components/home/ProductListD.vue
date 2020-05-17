@@ -99,7 +99,7 @@
 </style>
 <template>
 	<div class="product_list_double">
-		<div class="list_item" v-for="(item, index) in productList" :key="index" @click="prodcutInfo(item)">
+		<div class="list_item" v-for="(item, index) in productList" :key="index" @click="productInfo(item)">
 			<div class="list_img_wrap">
 				<img :src="item.productImg" alt="" />
 			</div>

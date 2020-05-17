@@ -76,11 +76,88 @@
 		}
 	}
 }
+.address_choice {
+	.van-radio-group {
+		box-sizing: border-box;
+		padding: 40 / @vw;
+	}
+	.van-radio__icon {
+		margin-left: 20 / @vw;
+	}
+	.van-radio {
+		border: 2 / @vw solid rgb(255, 169, 255);
+		border-radius: 5 / @vw;
+		& + .van-radio {
+			margin-top: 20 / @vw;
+		}
+	}
+	.van-radio__label {
+		width: 100%;
+		box-sizing: border-box;
+		padding-left: 50 / @vw;
+	}
+	.address_content {
+		width: 100%;
+		box-sizing: border-box;
+		display: flex;
+		flex-flow: column;
+		position: relative;
+		.address_top {
+			display: flex;
+			flex-flow: row nowrap;
+			justify-content: flex-start;
+			align-items: center;
+			.address_name {
+				font-size: 30 / @vw;
+			}
+			.address_phone {
+				margin-left: 40 / @vw;
+				font-size: 28 / @vw;
+			}
+		}
+		.address_address {
+			margin-top: 30 / @vw;
+			.address_area {
+				font-size: 28 / @vw;
+			}
+			.address_text {
+				margin-top: 10 / @vw;
+				font-size: 24 / @vw;
+			}
+		}
+		.edit_icon {
+			position: absolute;
+			top: 50%;
+			right: 0;
+			transform: translateY(-50%);
+			width: 50 / @vw;
+			height: 50 / @vw;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			cursor: pointer;
+			.icon {
+				font-size: 45 / @vw;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+		}
+	}
+	.add_address {
+		width: 100%;
+		box-sizing: border-box;
+		padding: 50 / @vw;
+		.van-button {
+			width: 100%;
+		}
+	}
+}
 </style>
 <template>
 	<div class="confirm_order">
 		<van-nav-bar title="提交订单" left-text="返回" left-arrow @click-left="onBack" />
-		<div class="address_wrap">
+		<div class="address_wrap" @click="addressDataShow = true">
 			<div class="address_content" v-if="addressData && Object.keys(addressData).length > 0">
 				<div class="address_people">
 					<div class="address_name">{{ addressData.name }}</div>
@@ -125,8 +202,11 @@
 			</van-radio-group>
 		</div>
 		<van-submit-bar :price="allPrice" button-text="提交订单" @submit="createOrder" />
-		<van-popup v-model="addressDataShow" position="bottom">
-			<van-radio-group v-model="addressData">
+		<van-popup v-model="addressDataShow" position="bottom" class="address_choice">
+			<div class="add_address" v-if="!addressList || !Array.isArray(addressList) || addressList.length === 0">
+				<van-button type="danger" @click="addAddress">添加地址</van-button>
+			</div>
+			<van-radio-group v-model="addressData" @change="addChange" v-else>
 				<van-radio v-for="(item, index) in addressList" :key="index" :name="item">
 					<div class="address_content">
 						<div class="address_top">
@@ -136,9 +216,6 @@
 						<div class="address_address">
 							<div class="address_area">{{ item.area }}</div>
 							<div class="address_text">{{ item.address }}</div>
-						</div>
-						<div class="edit_icon" @click="editAddress(item, index)">
-							<div class="icon iconfont iconbianji"></div>
 						</div>
 					</div>
 				</van-radio>
@@ -274,6 +351,14 @@ export default {
 		},
 		onBack() {
 			this.$router.go(-1);
+		},
+		addChange(val) {
+			this.addressDataShow = false;
+		},
+		addAddress() {
+			this.$router.push({
+				name: 'address'
+			});
 		}
 	}
 };

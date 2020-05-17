@@ -100,6 +100,9 @@
 		padding: 10 / @vw 30 / @vw;
 		border-radius: 8 / @vw;
 		border: 2 / @vw solid rgb(247, 157, 255);
+		& + .van-radio {
+			margin-top: 20 / @vw;
+		}
 	}
 }
 </style>
